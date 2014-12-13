@@ -8,13 +8,13 @@ source $SOURCE_DIR/config
 cp $SOURCE_DIR/java/Procfile $SOURCE_DIR/utils/Procfile
 echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
 echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
-apt-get -f update
-apt-get -f install -y software-properties-common
+apt-get update --fix-missing
+apt-get install -y --fix-missing software-properties-common
 add-apt-repository -y ppa:webupd8team/java
-apt-get -f update
-apt-get -f install -y oracle-java8-installer
-apt-get -f install -y oracle-java7-installer
-apt-get -f install -y tomcat7 maven
+apt-get update
+apt-get install -y --fix-missing oracle-java8-installer
+apt-get install -y --fix-missing oracle-java7-installer
+apt-get install -y --fix-missing tomcat7 maven
 
 echo "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
 
