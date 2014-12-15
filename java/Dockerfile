@@ -5,16 +5,16 @@
 
 from	ubuntu:14.04
 
-run echo "deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse" >  /etc/apt/sources.list
-run echo "deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse" >>  /etc/apt/sources.list
-run echo "deb http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse" >>  /etc/apt/sources.list
-run echo "deb http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse" >>  /etc/apt/sources.list
-run echo "deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse" >>  /etc/apt/sources.list
-run echo "deb-src http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse" >>  /etc/apt/sources.list
-run echo "deb-src http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse" >>  /etc/apt/sources.list
-run echo "deb-src http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse" >>  /etc/apt/sources.list
-run echo "deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse" >>  /etc/apt/sources.list
-run echo "deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb http://debian.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse" >  /etc/apt/sources.list
+run echo "deb http://debian.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb http://debian.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb http://debian.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb http://debian.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb-src http://debian.ustc.edu.cn/ubuntu/ trusty main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-security main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-updates main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-proposed main restricted universe multiverse" >>  /etc/apt/sources.list
+run echo "deb-src http://debian.ustc.edu.cn/ubuntu/ trusty-backports main restricted universe multiverse" >>  /etc/apt/sources.list
 
 run	apt-get update
 run	apt-get install wget -y --force-yes
