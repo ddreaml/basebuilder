@@ -4,7 +4,19 @@
 # 2- run: $ docker build --rm --no-cache -t tsuru/java https://raw.github.com/tsuru/basebuilder/master/java/Dockerfile
 
 from	ubuntu:14.04
-#run	apt-get update
+run cat | sudo tee  /etc/apt/sources.list <<EOF
+deb http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
+EOF
+run	apt-get update
 run	apt-get install wget -y --force-yes
 run	wget http://github.com/demelo-ng/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run	mkdir /var/lib/tsuru
