@@ -12,7 +12,7 @@ apt-get update --fix-missing
 apt-get install -y --fix-missing software-properties-common
 add-apt-repository -y ppa:webupd8team/java
 apt-get update
-apt-get install -y --fix-missing oracle-java8-installer
+#apt-get install -y --fix-missing oracle-java8-installer
 apt-get install -y --fix-missing oracle-java7-installer
 apt-get install -y --fix-missing tomcat7 maven
 
